@@ -1,0 +1,114 @@
+.border-bottom{
+    border-bottom: 1px solid #161616
+}
+.bottom-shdw{
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+}
+
+body h2[id="cid"]{
+    
+    margin-bottom: 0px;
+    padding: 5px;
+    padding-bottom: 10px;
+    margin-left:5px;
+    
+}
+body img[id="logo"]{
+    margin-left:15px;
+    margin-top:20px;
+}
+body h2[id="cid"]
+{
+    margin-left:13px; 
+    margin-top:20px; 
+}
+body nav{
+    margin-top:15px;
+}
+body nav div[id="links"]{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end; 
+}
+body div[id="nbar"]
+{
+    margin-top:-20px;
+}
+
+body nav a{
+margin-right:5px;
+}
+body div[name="car"]
+{
+    width:45%;
+    margin-top:-36%;
+    margin-left:7%;
+
+}
+body{
+    background: #f5f5f5;
+  
+}
+form div[id="bdlabel"]
+{
+    margin-right:23.2%;
+}
+form div[id="dd"]
+{
+    widows: 100px;
+    align-self: flex-start;
+    margin-left:45px;
+}
+form div[id="tac"]{
+    display: flex;
+    flex-direction:row;
+}
+form{
+    width:450px;
+    margin-top:15px;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-end;
+    margin-right:65px;
+    margin-left:auto;
+
+}
+form input[name="uname"]
+{
+    width:200px;
+    margin-right: 5px;
+}
+form input[name="umail"]
+{
+    width:405px;
+}
+form input[name="usname"]
+{
+    width:200px;
+}
+form div[id="nsin"]{
+    display: flex;
+    flex-direction: row;
+
+}
+form div[id="collInfo"]{
+    display: flex;
+    flex-direction: row;
+
+}
+form input[name="coid"]
+{
+    width:200px;
+    margin-right: 5px;
+}
+form input[name="coroll"]
+{
+    width:200px;
+}
+form h1[id="text1"]{
+    margin-right:77px;
+}
+form h6[id="text2"]{
+    margin-right:127px;
+    margin-top:-16px;
+}
