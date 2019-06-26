@@ -5,16 +5,16 @@
   */
    include "db_php/db_settings.php";
    $lnk=mysqli_connect(HOST,USERNAME,PASSWORD,DB);
-   if(isset($_GET['reg'])){
+   if(isset($_POST['reg'])){
    
-    $name=$_GET['uname']." ".$_GET['usname'];
-    $em=$_GET['umail'];
-    $ph=$_GET['phno'];
-    $pwd=md5(($_GET['upass']));
-    $branch=$_GET['coid'];
-    $croll=$_GET['coroll'];
-    $dob=$_GET['dob'];
-    $gen=$_GET['gender'];
+    $name=$_POST['uname']." ".$_POST['usname'];
+    $em=$_POST['umail'];
+    $ph=$_POST['phno'];
+    $pwd=md5(($_POST['upass']));
+    $branch=$_POST['coid'];
+    $croll=$_POST['coroll'];
+    $dob=$_POST['dob'];
+    $gen=$_POST['gender'];
     if($gen == 'M')
     {
       $dp="res/mstd.svg";
@@ -34,7 +34,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Studify|Register</title>
+        <title>AMS |Register</title>
         <meta name="charset" content="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <meta name="author" content="Divakar Lakhera">
@@ -61,24 +61,21 @@
     <body width="100%">
         <div id="nbar" class="d-flex align-items-center p-3 flex-md-row flex-column border-bottom bottom-shdw animated fadeInDown">
            <img src="res/astronaut.svg" id="logo" class="img-fluid animated zoomIn" height="55" width="55">
-            <h2 class="mr-md-auto animated fadeInLeft" style="font-family: 'Macondo Swash Caps', cursive;" id="cid">Studify</h2>
+            <h2 class="mr-md-auto animated fadeInLeft" style="font-family: 'Macondo Swash Caps', cursive;" id="cid">AMS</h2>
           <nav class="animated fadeInDown navbar">
                 <div id="links">
-                <a class="p-2" id="ff" style="font-size: 20px" style="font-family: 'Roboto', sans-serif;" href="feat.html">Features</a>
-                <a class="p-2" style="font-size: 20px" style="font-family: 'Roboto', sans-serif;"href="coll.html">Colleges</a>
-                <a class="p-2 " style="font-size: 20px" style="font-family: 'Roboto', sans-serif;" href="pric.html">Pricing</a>
-                <a class="p-2 " style="font-size: 20px" style="font-family: 'Roboto', sans-serif;"href="supp.html">Support</a>
-                <button type="button" onclick="location.href='index.html'" style="margin-left:17px; margin-top:5px;" class="btn btn-outline-success btn-lg mr-4 animated fadeInDown ">Sign In</button>
+
+                <button type="button" onclick="location.href='index.php'" style="margin-left:17px; margin-top:5px;" class="btn btn-outline-success btn-lg mr-4 animated fadeInDown ">Sign In</button>
                 </nav>
                 </nav>
             
             </div>
-    <form style="font-family: 'Roboto', sans-serif;" method="GET">
+    <form style="font-family: 'Roboto', sans-serif;" method="POST">
     <div class="form-group">
        <h1 class="text-weight-normal animated fadeInDown" id="text1">Create an Account</h1>
     </div>
     <div class="form-group">
-        <h6 class="text-weight-normal animated fadeInDown" id="text2">Signup and <font style="font-family: 'Macondo Swash Caps', cursive;">&copy; Studify</font> your college life.</h6>
+        <h6 class="text-weight-normal animated fadeInDown" id="text2">Signup and <font style="font-family: 'Macondo Swash Caps', cursive;">&copy; AMS</font> your college life.</h6>
     </div>
     <div class="form-group" id="nsin">
         <input type="text" class="form-control animated fadeInDown" name="uname" placeholder="Name">
@@ -125,30 +122,30 @@
     </form>
     <div id="carousel" name="car" class="carousel slide animated fadeIn bottom-shdw" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselIndicators" data-slide-to="2"></li>
+          <li data-tarPOST="#carouselIndicators" data-slide-to="0" class="active"></li>
+          <li data-tarPOST="#carouselIndicators" data-slide-to="1"></li>
+          <li data-tarPOST="#carouselIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100 img-fluid rounded" src="res/check-prog.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5 class="animated fadeInUp h2"style="color:#f5f5f5">Check Your Progress</h5>
-                <p class="animated fadeInUp "style="color:#f5f5f5">Studify lets you track your grades and help you to perform better.</p>
+                <p class="animated fadeInUp "style="color:#f5f5f5">AMS lets you track your grades and help you to perform better.</p>
                 </div>
             </div>
           <div class="carousel-item">
             <img class="d-block w-100 img-fluid rounded" src="res/cloud-storage.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5 class="animated fadeInUp h2" style="color:#f5f5f5">Always Connected</h5>
-                <p class="animated fadeInUp" style="color:#f5f5f5">Studify saves all its data to cloud so that you can access it anywhere,anytime.</p>
+                <p class="animated fadeInUp" style="color:#f5f5f5">AMS saves all its data to cloud so that you can access it anywhere,anytime.</p>
                 </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100 img-fluid rounded" src="res/teach-stud.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5 class="animated fadeInUp h2">Modify records in a go</h5>
-                <p class="animated fadeInUp">Studify gives powerful dynamic tools for teachers to modify their student's record.</p>
+                <p class="animated fadeInUp">AMS gives powerful dynamic tools for teachers to modify their student's record.</p>
                 </div>
           </div>
         </div>
@@ -157,6 +154,6 @@
       <br>
       <hr width="900px" size="10" class="border-bottom bottom-shdw animated bounceInUp" style="margin-top:100px">
       <br>
-      <p class="text-muted animated bounceInUp"  id="cptrt"  style="margin-top:-30px;margin-left:600px">Studify &copy; Divakar Lakhera 2018-19</p>
+      <p class="text-muted animated bounceInUp"  id="cptrt"  style="margin-top:-30px;margin-left:600px">AMS &copy; Divakar Lakhera 2018-19</p>
     </body>
 </html>
