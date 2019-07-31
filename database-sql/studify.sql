@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`std_id`, `std_name`, `std_branch`, `std_pwd`, `std_email`, `std_phno`, `std_dpLoc`, `collRollno`) VALUES
-(5, 'Divakar Lakhera', 'CSE', '0046033830656ca2e72e6e9fa14ee283', 'divakarlakhera99@gmail.com', 9639930676, 'usr/1310mstd2.svg', 'BT18CSE002'),
+(5, 'Divakar Lakhera', 'CSE', '0046033830656ca2e72e6e9fa14ee283', 'divlakh1@gmail.com', 9639930676, 'usr/1310mstd2.svg', 'BT18CSE002'),
 (6, 'Jay Sharma', 'MEC', 'f0e7d0d17cff891edbc9cdf92dcd9297', 'jay12@gmail.com', 9182381238, 'usr/19mstd2.svg', 'BT123CS');
 
 -- --------------------------------------------------------
